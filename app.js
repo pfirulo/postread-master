@@ -1,7 +1,3 @@
-// ----------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation. All rights reserved.
-// ----------------------------------------------------------------------------
-
 // This is a base-level Azure Mobile App SDK.
 var express = require('express'),
     azureMobileApps = require('azure-mobile-apps');
@@ -30,7 +26,7 @@ mobile.api.import('./api');
 // The tables.initialize() method does the initialization asynchronously
 // and returns a Promise.
 mobile.tables.initialize()
-    .then(function () {
-        app.use(mobile);    // Register the Azure Mobile Apps middleware
-        app.listen(process.env.PORT || 3000);   // Listen for requests
+    .then(function() {
+        app.use(mobile); // Register the Azure Mobile Apps middleware
+        app.listen(process.env.PORT || 3000); // Listen for requests
     });
